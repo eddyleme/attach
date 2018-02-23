@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="email.css">
+    <title>Gmail New Message</title>
+  </head>
+
+<!--------------------------------------------------------------
+--------------------------------------------------------------
+-------------------------body------------------------------
+--------------------------------------------------------------
+-->
+  <body>
+
+
+
+    <header>
+      <button id="send" type="submit">Send</button>
+      <button id="save-draft" type="submit">Save Draft</button>
+      <button id="discard" type="submit">Discard</button>
+    </header>
+
+
+
+    <main>
+
+      <form class="address" action="#" method="post">
+        To: <textarea name="name" rows="1" cols="200"></textarea>
+      </form>
+      <form class="address" action="#" method="post">
+        Cc: <textarea name="name" rows="1" cols="200"></textarea>
+      </form>
+      <form class="address" action="#" method="post">
+        Bcc: <textarea name="name" rows="1" cols="199"></textarea>
+      </form>
+      <form class="address" action="#" method="post">
+        Subject: <textarea name="name" rows="1" cols="195"></textarea>
+      </form>
+
+
+      <form action="/action_page.php">
+        Attachments: <input type="file" id="attach-button" name="attachment" accept="*">
+        <!-- <input type="submit"> -->
+      </form>
+
+
+
+
+      <form class="message" action="#" method="post">
+      <textarea name="name" rows="8" cols="204"></textarea>
+      </form>
+
+    </main>
+
+
+
+
+    <footer>
+      <button id="send" type="submit">Send</button>
+      <button id="save-draft" type="submit">Save Draft</button>
+      <button id="discard" type="submit">Discard</button>
+    </footer>
+
+
+
+
+  <!--------------------------------------------------------------
+  --------------------------------------------------------------
+  --------------------------------------------------------------
+  --------------------------------------------------------------
+  -->
+  </body>
+</html>
