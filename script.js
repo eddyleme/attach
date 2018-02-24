@@ -29,7 +29,7 @@ window.addEventListener( 'load', function() {
       mentionAttach = true;
     }
     if (notAttached === false && mentionAttach) {
-      alert("nothing attached to email");
+      alert("there's nothing attached to email, but you said there is, don't be that guy");
     };
   });
 
@@ -40,7 +40,7 @@ window.addEventListener( 'load', function() {
       mentionAttach = true;
     }
     if (notAttached === false && mentionAttach) {
-      alert("nothing attached to email");
+      alert("there's nothing attached to email, but you said there is, don't be that guy");
     };
   });
 });
