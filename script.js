@@ -1,32 +1,48 @@
-console.log("script loaded")
-
-
-
-
 window.addEventListener( 'load', function() {
-  //run this, when the window has loaded
   console.log("window loaded");
-  let attachButton= document.getElementById('attach-button');
-  // attachButton.value = "type text here..."
-  let notAttached = false
-    attachButton.addEventListener('click', function() {
-      if ( attachButton.value != null) {
-        attachButton.style.border = '2px solid red';
-        notAttached = false
-      } else {
-        notAttached = true
-        console.log("not attached")
+
+  let attachButton= document.getElementById('attach-input');
+  let sendButton1= document.getElementById('send1');
+  let sendButton2= document.getElementById('send2');
+  var messageText = document.getElementById("message-text");
+
+  let notAttached = true;
+  let mentionAttach = false;
+
+ function checkAttached(){
+   if (attachButton.files.length>0) {
+     notAttached = true;
+     console.log("it attached");
+   } else {
+     notAttached = false;
+     console.log("not attached");
+     console.dir(arguments);
+   }
+ }
+
+    messageText.addEventListener("focusout", function() {
+      console.log(messageText.value);
+      if (messageText.value.search("attach")==0) {
+        mentionAttach = true;
       }
-      console.dir(arguments);
-    })
+    });
 
+    sendButton1.addEventListener('click', function(event) {
+      event.preventDefault();
+      checkAttached();
+    if (notAttached === false) {
+      alert("nothing attached to email");
+    };
+  });
 
-
-  let sendButton= document.getElementById('send')
-  sendButton.addEventListener('click', function(event) {
-  event.preventDefault();
-  while (notAttached === true) {
-  alert("nothing attached to email");
-  }
-});
+    sendButton2.addEventListener('click', function(event) {
+      event.preventDefault();
+      checkAttached();
+    if (messageText.value.search("attach")==0) {
+      mentionAttach = true;
+    }
+    if (notAttached === false && mentionAttach) {
+      alert("nothing attached to email");
+    };
+  });
 });

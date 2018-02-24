@@ -17,7 +17,7 @@
 
 
     <header>
-      <button id="send" type="submit">Send</button>
+      <button id="send1" type="submit">Send</button>
       <button id="save-draft" type="submit">Save Draft</button>
       <button id="discard" type="submit">Discard</button>
     </header>
@@ -40,25 +40,22 @@
       </form>
 
 
-      <form action="/action_page.php">
-        Attachments: <input type="file" id="attach-button" name="attachment" accept="*">
-        <!-- <input type="submit"> -->
+
+      <form id="attach-form" action="#">
+        Attachments: <input type="file" id="attach-input" name="attachment" accept="*">
       </form>
 
 
 
-
       <form class="message" action="#" method="post">
-      <textarea name="name" rows="8" cols="204"></textarea>
+      <textarea name="name" id="message-text" rows="8" cols="204"></textarea>
       </form>
 
     </main>
 
 
-
-
     <footer>
-      <button id="send" type="submit">Send</button>
+      <button id="send2" type="submit">Send</button>
       <button id="save-draft" type="submit">Save Draft</button>
       <button id="discard" type="submit">Discard</button>
     </footer>
